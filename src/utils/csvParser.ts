@@ -1,11 +1,10 @@
-// src/utils/csvParser.ts
+
 import { Book } from '../models/book';
-import { v4 as uuidv4 } from 'uuid'; // To generate unique IDs
+import { v4 as uuidv4 } from 'uuid'; 
 
 export function parseCSV(data: string): { validBooks: Book[], errors: string[] } {
   const lines = data.trim().split('\n');
 
-  // Expect the first line to be a header: title,author,publishedYear
   const [header, ...rows] = lines;
 
   const validBooks: Book[] = [];
@@ -27,7 +26,7 @@ export function parseCSV(data: string): { validBooks: Book[], errors: string[] }
     }
 
     validBooks.push({
-      id: uuidv4(), // Generate unique ID
+      id: uuidv4(), 
       title,
       author,
       publishedYear,
