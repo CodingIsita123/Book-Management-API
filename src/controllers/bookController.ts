@@ -45,8 +45,8 @@ export const deleteBook = (req: Request, res: Response): void => {
     return;
   }
 
-  console.log('DELETE RESPONSE:', { message: 'Book Deleted' }); // 
-  res.status(200).json({ message: 'Book Deleted' }); // 
+  console.log('DELETE RESPONSE:', { message: 'Book Deleted' }); 
+  res.status(200).json({ message: 'Book Deleted' }); 
 };
 
 
